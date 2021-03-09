@@ -27,8 +27,7 @@
 #git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package/molun/luci-theme-infinityfreedom
 
 #mt-wifi
-svn co https://github.com/nanchuci/openwrt-packages/trunk/mt-drivers/mt7603e package/lean/MTK7615-DBDC-LINUX5.4/mt7603e
-svn co https://github.com/nanchuci/openwrt-packages/trunk/mt-drivers/mt7612e package/lean/MTK7615-DBDC-LINUX5.4/mt7612e
+svn co https://github.com/nanchuci/lede/trunk/package/lean/mt package/lean/mt
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
