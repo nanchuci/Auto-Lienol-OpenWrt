@@ -12,7 +12,7 @@
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/ImmortalWrt/E8820S/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/E8820S/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
 sed -i 's/OpenWrt/ZTE-E8820S-%s/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
@@ -31,14 +31,6 @@ sed -i 's/OpenWrt_5G/ZTE-E8820S-5G/g' package/lean/MTK7615-DBDC-LINUX5.4/drivers
 
 # 更改时区
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
-
-#passwall出国软件
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/luci-app-passwall package/lean/luci-app-passwall
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/brook package/lean/brook
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/chinadns-ng package/lean/chinadns-ng
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/tcping package/lean/tcping
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-go package/lean/trojan-go
-#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-plus package/lean/trojan-plus
 
 # Clone community packages to package/community
 mkdir package/community
