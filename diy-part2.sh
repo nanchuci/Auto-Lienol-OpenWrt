@@ -18,10 +18,10 @@ sed -i 's/ImmortalWrt/E8820S/g' package/base-files/files/bin/config_generate
 sed -i 's/OpenWrt/ZTE-E8820S-%s/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改闭源驱动2G wifi名称
-sed -i 's/OpenWrt_2G/ZTE-E8820S/g' package/lean/MTK7615-DBDC-LINUX5.4/mt_wifi/files/mt7603.dat
+sed -i 's/OpenWrt_2G/ZTE-E8820S/g' package/lean/MTK7615-DBDC-LINUX5.4/drivers/mt_wifi/files/mt7603.dat
 
 # 修改闭源驱动5G wifi名称
-sed -i 's/OpenWrt_5G/ZTE-E8820S-5G/g' package/lean/MTK7615-DBDC-LINUX5.4/mt_wifi/files/mt7612.dat
+sed -i 's/OpenWrt_5G/ZTE-E8820S-5G/g' package/lean/MTK7615-DBDC-LINUX5.4/drivers/mt_wifi/files/mt7612.dat
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' ./package/lean/default-settings/files/zzz-default-settings
@@ -33,12 +33,12 @@ sed -i 's/OpenWrt_5G/ZTE-E8820S-5G/g' package/lean/MTK7615-DBDC-LINUX5.4/mt_wifi
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
 
 #passwall出国软件
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/luci-app-passwall package/lean/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/brook package/lean/brook
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/chinadns-ng package/lean/chinadns-ng
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/tcping package/lean/tcping
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-go package/lean/trojan-go
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-plus package/lean/trojan-plus
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/luci-app-passwall package/lean/luci-app-passwall
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/brook package/lean/brook
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/chinadns-ng package/lean/chinadns-ng
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/tcping package/lean/tcping
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-go package/lean/trojan-go
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/package/trojan-plus package/lean/trojan-plus
 
 # Clone community packages to package/community
 mkdir package/community
@@ -56,11 +56,4 @@ git clone https://github.com/jerrykuku/node-request.git package/lean/node-reques
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus  #luci-app-jd-dailybonus[京东签到]
 
 # Add luci-app-passwall
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
-
-# Mod zzz-default-settings
-pushd package/default-settings/files
-sed -i '/http/d' zzz-default-settings
-export orig_version="$(cat "zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')"
-sed -i "s/${orig_version}/${orig_version} ($(date +"%Y-%m-%d"))/g" zzz-default-settings
-popd
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
