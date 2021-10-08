@@ -16,15 +16,17 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 sed -i 's/OpenWrt/MSG1500/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
-sed -i 's/OpenWrt/RAISECOM-MSG1500-%s/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i 's/OpenWrt/RAISECOM-MSG1500-%$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改闭源驱动2G wifi名称
-sed -i 's/OpenWrt/RAISECOM-MSG1500/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.2G.dat
-sed -i 's/OpenWrt/RAISECOM-MSG1500/g' package/lean/mt/drivers/mt_wifi/files/mt7615.2G.dat
+sed -i 's/OpenWrt/RAISECOM-MSG1500-%$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.2G.dat
+sed -i 's/OpenWrt/RAISECOM-MSG1500-%$/g' package/lean/MTK7615-DBDC-LINUX5.4/drivers/mt_wifi/files/mt7615.1.2G.dat
+sed -i 's/OpenWrt/RAISECOM-MSG1500-%$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.2G.dat
 
 # 修改闭源驱动5G wifi名称
-sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.5G.dat
-sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G/g' package/lean/mt/drivers/mt_wifi/files/mt7615.5G.dat
+sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G-%$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.5G.dat
+sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G-%$/g' package/lean/MTK7615-DBDC-LINUX5.4/drivers/mt_wifi/files/mt7615.1.5G.dat
+sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G-%$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.5G.dat
 
 # 设置密码为空（安装固件时无需密码登陆，然后自己修改想要的密码）
 #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' ./package/lean/default-settings/files/zzz-default-settings
@@ -40,7 +42,7 @@ mkdir package/community
 pushd package/community
 
 # Add Lienol's Packages
-git clone --depth=1 https://github.com/Lienol/openwrt-package
+#git clone --depth=1 https://github.com/Lienol/openwrt-package
 
 # Add dnsfilter
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter
@@ -162,10 +164,10 @@ popd
 #popd
 
 # Add po2lmo
-git clone https://github.com/openwrt-dev/po2lmo.git
-pushd po2lmo
-make && sudo make install
-popd
+#git clone https://github.com/openwrt-dev/po2lmo.git
+#pushd po2lmo
+#make && sudo make install
+#popd
 
 # Change default shell to zsh
 #sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
