@@ -12,7 +12,7 @@
 # 修改openwrt登陆地址,把下面的192.168.123.1修改成你想要的就可以了
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
-# 修改主机名字，把OpenWrt-123修改你喜欢的就行（不能纯数字或者使用中文）
+# 修改主机名字，把MSG1500修改你喜欢的就行（不能纯数字或者使用中文）
 sed -i 's/OpenWrt/MSG1500/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
@@ -91,6 +91,9 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 
 # Add luci-app-gowebdav
 git clone --depth=1 https://github.com/project-openwrt/openwrt-gowebdav
+
+# Add luci-app-nat6-helper
+git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
