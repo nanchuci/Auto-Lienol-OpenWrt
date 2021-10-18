@@ -99,8 +99,8 @@ jobs:
     - name: 再次下载安装feeds
       run: |
         cd openwrt
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        feeds update
+        feeds install -a
 
     - name: 加载.config设置
       run: |
