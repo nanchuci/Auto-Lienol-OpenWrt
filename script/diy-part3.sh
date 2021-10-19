@@ -13,10 +13,10 @@
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把MSG1500修改你喜欢的就行（不能纯数字或者使用中文）
-#sed -i 's/OpenWrt/MSG1500/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/MSG1500/g' package/base-files/files/bin/config_generate
 
 # 修改开源驱动wifi名称
-sed -i 's/OpenWrt/RAISECOM-MSG1500-$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/OpenWrt/RAISECOM-MSG1500-$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # 修改闭源驱动2G wifi名称
 sed -i 's/OpenWrt/RAISECOM-MSG1500-$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.1.2G.dat
