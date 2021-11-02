@@ -49,8 +49,8 @@ pushd package/community
 # Add Lienol's Packages
 #git clone --depth=1 https://github.com/Lienol/openwrt-package
 
-# Add luci-app-advanced
-#git clone --depth=1 https://github.com/sirpdboy/luci-app-advanced
+# Add luci-app-eqos
+svn co https://github.com/Beginner-Go/my-packages/trunk/luci-app-eqos
 
 # Add dnsfilter
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter
