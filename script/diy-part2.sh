@@ -66,12 +66,15 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 #git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
 #git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
+# Add natflow
+svn co https://github.com/kiddin9/openwrt-packages/trunk/natflow
+
 # Add iptvhelper & luci-app-iptvhelper
 svn co https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
 
-# Add ServerChan
-#git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+# Add luci-app-ota
+svn co https://github.com/jjm2473/openwrt-apps/trunk/luci-app-ota
 
 # Add OpenClash
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
