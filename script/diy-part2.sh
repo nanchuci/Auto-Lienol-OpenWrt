@@ -66,8 +66,11 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 #git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
 #git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk
 
+# Add lua-ipops
+svn co https://github.com/x-wrt/com.x-wrt/trunk/lua-ipops
+
 # Add natflow
-svn co https://github.com/kiddin9/openwrt-packages/trunk/natflow
+svn co https://github.com/x-wrt/com.x-wrt/trunk/natflow
 
 # Add iptvhelper & luci-app-iptvhelper
 svn co https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
@@ -107,8 +110,8 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 rm -rf ../lean/luci-theme-argon
 
 # Add luci-theme-rosy
-git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
-rm -rf ../lean/luci-theme-rosy
+#git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
+#rm -rf ../lean/luci-theme-rosy
 
 # Add tmate
 git clone --depth=1 https://github.com/project-openwrt/openwrt-tmate
@@ -131,12 +134,12 @@ git clone --depth=1 https://github.com/destan19/OpenAppFilter
 #popd
 
 # Add netdata
-rm -rf ../lean/netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
+#rm -rf ../lean/netdata
+#svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata
 
 # luci-app-netdata
-rm -rf ../lean/luci-app-netdata
-git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata
+#rm -rf ../lean/luci-app-netdata
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-netdata
 
 # Mod zzz-default-settings
 #pushd package/lean/default-settings/files
