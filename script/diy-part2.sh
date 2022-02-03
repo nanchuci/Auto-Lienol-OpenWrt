@@ -77,7 +77,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/iptvhelper
 svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-iptvhelper
 
 # Add luci-app-gpsysupgrade
-svn co https://github.com/kiddin9/my-packages/trunk/luci-app-gpsysupgrade
+#svn co https://github.com/kiddin9/my-packages/trunk/luci-app-gpsysupgrade
 
 # Add OpenClash
 #git clone --depth=1 -b master https://github.com/vernesong/OpenClash
