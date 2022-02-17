@@ -107,7 +107,7 @@ git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
-rm -rf ../lean/luci-theme-argon
+rm -rf ../luci/themes/luci-theme-argon
 
 # Add luci-theme-rosy
 #git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
