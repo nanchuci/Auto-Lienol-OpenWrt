@@ -19,4 +19,4 @@
 
 # Add luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-rm -rf ../luci/themes/luci-theme-argon
+rm -rf ../themes/luci-theme-argon
