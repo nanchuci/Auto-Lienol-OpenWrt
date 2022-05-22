@@ -99,16 +99,16 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 #git clone --depth=1 https://github.com/lisaac/luci-lib-docker
 
 # Add luci-app-store
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store
+#svn co https://github.com/linkease/istore/trunk/luci/luci-app-store
 
 # Add luci-app-nat6-helper
 git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 
 # Add luci-theme-argon
-cd feeds/luci/themes/
+cd lede/package/lean
 rm -rf luci-theme-argon 
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
-git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
+#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add luci-theme-rosy
 #git clone --depth=1 -b openwrt-18.06 https://github.com/shiyu1314/luci-theme-rosy
