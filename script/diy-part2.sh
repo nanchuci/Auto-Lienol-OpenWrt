@@ -108,7 +108,7 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 
 # Add luci-theme-argon
-cd lede/feeds/luci/themes
+cd lede/luci/themes
 rm -rf luci-theme-argon 
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
