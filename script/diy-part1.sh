@@ -18,6 +18,6 @@
 #sed -i '$a src-git diy https://github.com/CCnut/feed-netkeeper.git;LUCI-LUA-UCITRACK' feeds.conf.default
 
 # Add luci-theme-argon
-cd feeds/luci/themes
+cd lede/package/lean
 rm -rf luci-theme-argon 
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
