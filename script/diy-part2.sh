@@ -56,6 +56,7 @@ svn co https://github.com/kiddin9/openwrt-packages/trunk/luci-app-eqos
 git clone --depth=1 https://github.com/garypang13/luci-app-dnsfilter
 
 # Add luci-app-passwall
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall
 
 # Add luci-app-vssr <M>
@@ -108,9 +109,9 @@ cp luci-app-diskman/Parted.Makefile parted/Makefile
 git clone --depth=1 https://github.com/Ausaci/luci-app-nat6-helper
 
 # Add luci-theme-argon
-cd lede/package/lean
-rm -rf luci-theme-argon 
-git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
+#cd lede/package/lean
+#rm -rf luci-theme-argon 
+#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon
 #git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config
 
 # Add luci-theme-rosy
