@@ -30,8 +30,8 @@ sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G-$/g' package/lean/mt/drivers/mt_wifi/fi
 sed -i 's/OpenWrt_5G/RAISECOM-MSG1500-5G-$/g' package/lean/mt/drivers/mt_wifi/files/mt7615.5G.dat
 sed -i 's/OpenWRT-5G/RAISECOM-MSG1500-5G/g' package/lean/mt/drivers/mt7615d/files/lib/wifi/mt_dbdc.sh
 
-# 修改内核版本为5.15
-sed -i 's/5.4/5.15/g' target/linux/ramips/Makefile
+# 修改内核版本为5.10
+sed -i 's/5.4/5.10/g' target/linux/ramips/Makefile
 
 # 添加个性信息
 #sed -i 's/22.5.5/22.5.5 by nanchuci/g' ./package/lean/default-settings/files/zzz-default-settings
