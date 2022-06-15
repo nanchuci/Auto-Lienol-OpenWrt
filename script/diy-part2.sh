@@ -128,7 +128,7 @@ git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 #git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
 
 # Add OpenAppFilter
-git clone --depth=1 https://github.com/destan19/OpenAppFilter
+#git clone --depth=1 https://github.com/destan19/OpenAppFilter
 
 # Add luci-app-oled (R2S Only)
 #git clone --depth=1 https://github.com/NateLol/luci-app-oled
