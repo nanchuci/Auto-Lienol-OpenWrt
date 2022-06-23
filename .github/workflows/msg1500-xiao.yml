@@ -39,7 +39,7 @@ on:
 
 
 env:
-  REPO_URL: https://github.com/nanchuci/lede2
+  REPO_URL: git@github.com:nanchuci/lede2.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/msg1500-xiao.config
